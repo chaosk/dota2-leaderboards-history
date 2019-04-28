@@ -1,0 +1,22 @@
+indexes:
+
+- kind: Snapshot
+  ancestor: yes
+  properties:
+  - name: date
+    direction: desc
+
+- kind: Record
+  ancestor: yes
+  properties:
+    - name: name
+    - name: date
+      direction: desc
+    - name: rank
+
+- kind: Record
+  ancestor: yes
+  properties:
+  - name: rank
+    direction: asc
+  - name: name
