@@ -22,7 +22,7 @@ def fetch_leaderboard(region):
     logger.info("Fetching leaderboard data for region=%(region)s", {"region": region})
     response = session.get(
         "https://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001",
-        params={"division": region},
+        params={"division": region, "leaderboard": "0"},
     )
     response.raise_for_status()
     return response.json()
